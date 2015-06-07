@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -28,7 +30,25 @@ public class HomeActivity extends ActionBarActivity {
         gameNames.add("Image Puzzle");
         ArrayAdapter<String> listAdapter = new ArrayAdapter<>(this, R.layout.list_view_adapter, R.id.list_view_adapter, gameNames);
 
+
         listView.setAdapter(listAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            //here parent is ListView...view is i think textView..
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if(parent.getItemAtPosition(position) == "Tic Tac Toe") {
+
+                }
+//                System.out.println("****s******************************"+parent+"##########################");
+//                System.out.println("**********************************"+view+"##########################");
+//                System.out.println("**********************************"+position+"##########################");
+//                System.out.println("**********************************"+id+"##########################");
+            }
+
+
+        });
+
     }
 
 //    public void startGame(View view) {
