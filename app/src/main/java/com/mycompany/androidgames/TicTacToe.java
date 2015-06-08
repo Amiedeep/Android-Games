@@ -6,9 +6,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
-public class TicTacToe extends FragmentActivity {
+public class TicTacToe extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +17,11 @@ public class TicTacToe extends FragmentActivity {
         Intent intent = getIntent();
 //        System.out.println(intent.getStringExtra(HomeActivity.PLAYER1_NAME));
         setContentView(R.layout.activity_tic_tac_toe);
+    }
+
+    public void call_activity_testing(View view) {
+        System.out.println("*******************************i'm clicked");
+        System.out.println(view.toString());
     }
 
 
