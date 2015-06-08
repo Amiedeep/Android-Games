@@ -2,7 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:id="@+id/home_activity"
+     >
 
     <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
     <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
@@ -11,6 +13,8 @@
 
     <!--<TextView android:text="@string/hello_world" android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content" />-->
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,4 +43,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/games_list_view"
         />
+
+
 </LinearLayout>

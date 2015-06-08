@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="Fragments.AddPlayerNamesFragment"
+    android:orientation="vertical"
+    android:id="@+id/add_fragment" >
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:height="70dp"
+        android:hint="Player1 name"
+        android:id="@+id/player1_name" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:height="70dp"
+        android:hint="Player2 name"
+        android:id="@+id/player2_name" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:id="@+id/Submit_player_names_button"
+        android:onClick="getPlayerNames"
+         />
+
+</LinearLayout>

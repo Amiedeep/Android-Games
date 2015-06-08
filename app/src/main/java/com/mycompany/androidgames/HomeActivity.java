@@ -1,5 +1,7 @@
 package com.mycompany.androidgames;
 
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,13 +9,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import Fragments.AddPlayerNamesFragment;
+
 
 public class HomeActivity extends ActionBarActivity {
+
+    public static String PLAYER1_NAME;
+    public static String PLAYER2_NAME;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +30,7 @@ public class HomeActivity extends ActionBarActivity {
         setContentView(R.layout.activity_home);
         ListView listView = (ListView) findViewById(R.id.games_list_view);
         addAndShowGames(listView);
+
     }
 
     public void addAndShowGames(ListView listView) {
@@ -37,7 +47,14 @@ public class HomeActivity extends ActionBarActivity {
             //here parent is ListView...view is i think textView..
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                if(parent.getItemAtPosition(position) == "Tic Tac Toe") {
+                if (parent.getItemAtPosition(position) == "Tic Tac Toe") {
+
+//                    FragmentTransaction fragmentTransaction = getFragmentManager ().beginTransaction();
+//                    AddPlayerNamesFragment fragment = new AddPlayerNamesFragment();
+//                    fragmentTransaction.add(R.id.home_activity, fragment);
+//                    fragmentTransaction.commit();
+                    setContentView(R.layout.fragment_add_player_names);
+
 
                 }
 //                System.out.println("****s******************************"+parent+"##########################");
@@ -49,6 +66,19 @@ public class HomeActivity extends ActionBarActivity {
 
         });
 
+    }
+
+    public void getPlayerNames(View view) {
+        EditText editText = (EditText) findViewById(R.id.player1_name);
+        String player1_name = editText.getText().toString();
+        editText = (EditText) findViewById(R.id.player2_name);
+        String player2_name = editText.getText().toString();
+        Intent intent = new Intent(this, TicTacToe.class);
+        intent.putExtra(PLAYER1_NAME, player1_name);
+        intent.putExtra(PLAYER2_NAME, player2_name);
+        startActivity(intent);
+
+//        System.out.println("************************"+player1_name+"************"+player2_name);
     }
 
 //    public void startGame(View view) {
