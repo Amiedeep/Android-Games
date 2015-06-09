@@ -36,14 +36,14 @@ public class HomeActivity extends ActionBarActivity {
         ListView listView = (ListView) findViewById(R.id.games_list_view);
         addAndShowGames(listView);
         addItemsToNavigationDrawer();
-        ((LinearLayout)this.findViewById(R.id.home_activity)).setVisibility(LinearLayout.GONE);
+//        ((LinearLayout)this.findViewById(R.id.home_activity)).setVisibility(LinearLayout.GONE);
 
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.drawable.navigation_drawer_button, R.string.hello_world, R.string.app_name);
         drawerLayout.setDrawerListener(drawerToggle);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ((DrawerLayout)this.findViewById(R.id.drawer_layout)).setVisibility(DrawerLayout.VISIBLE);
+//        ((DrawerLayout)this.findViewById(R.id.drawer_layout)).setVisibility(DrawerLayout.VISIBLE);
 //        getSupportActionBar().hi
 //        getSupportActionBar().hi
 
