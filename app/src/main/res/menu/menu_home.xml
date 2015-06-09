@@ -3,4 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".HomeActivity">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+
+    <item
+        android:icon="@drawable/navigation_drawer_button"
+        app:showAsAction="always"
+        android:id="@+id/navigation_drawer_button_id"
+        android:title="open_navigation_drawer"
+        />
 </menu>
