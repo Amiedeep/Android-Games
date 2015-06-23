@@ -33,8 +33,8 @@ public class HomeActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ListView listView = (ListView) findViewById(R.id.games_list_view);
-        addAndShowGames(listView);
+//        ListView listView = (ListView) findViewById(R.id.games_list_view);
+//        addAndShowGames(listView);
         addItemsToNavigationDrawer();
 //        ((LinearLayout)this.findViewById(R.id.home_activity)).setVisibility(LinearLayout.GONE);
 
@@ -143,9 +143,9 @@ public class HomeActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-        if(id == R.id.navigation_drawer_button_id) {
-
-        }
+//        if(id == R.id.navigation_drawer_button_id) {
+//
+//        }
 
         return super.onOptionsItemSelected(item);
     }
